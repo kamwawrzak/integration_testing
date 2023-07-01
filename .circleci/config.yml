@@ -15,7 +15,7 @@ jobs:
       - run:
           name: whoam
           command: |
-            whoami
+            echo $USER
             mkdir app
       - checkout
       - setup_remote_docker:
