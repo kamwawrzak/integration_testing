@@ -9,8 +9,8 @@ jobs:
   tests:
     working_directory: /app
     executor: go-executor
-    #docker:
-    #  - image: docker:17.05.0-ce-git
+    docker:
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
       - setup_remote_docker:
