@@ -7,18 +7,21 @@ executors:
       DOCKER_COMPOSE_VERSION: 1.29.2
 jobs:
   tests:
-    executor: docker-executor
     working_directory: /app
     docker:
       - image: docker:17.05.0-ce-git
     steps:
       - checkout
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
+          version: 20.10.12
       - run:
           name: Install dependencies
           command: |
-            apk add --no-cache apk py3-pip
-            pip install docker-compose==19.03.0
+            apk update && apk upgrade && apk add curl  
+            curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64" -o ~/docker-compose  
+            chmod +x ~/docker-compose  
+            mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
           name: Start MySQL container
           command: docker-compose up -d mysql
