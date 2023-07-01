@@ -7,7 +7,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: mypassword
       MYSQL_DATABASE: mydatabase
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
@@ -15,4 +15,4 @@ services:
     container_name: integration-test
     image: integration-test:latest
     ports:
-      - 12110:12110
+    - 12110:12110
