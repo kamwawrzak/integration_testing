@@ -16,7 +16,7 @@ jobs:
           name: whoam
           command: |
             echo $USER
-            chown -R $USER:$USER /
+            chown -R $USER:$USER /app
             mkdir app
       - checkout
       - setup_remote_docker:
