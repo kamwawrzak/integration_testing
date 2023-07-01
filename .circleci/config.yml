@@ -6,11 +6,11 @@ jobs:
       - image: docker:17.05.0-ce-git
     steps:
       - checkout
-
       - run:
-          name: Start database
-          command: |
-            docker run --name my-mysql --network my-network -e MYSQL_ROOT_PASSWORD=$(DB_PASSWORD) -p 3306:3306 -d mysql:latest
+          name: Start MySQL container
+          command: docker-compose up -d mysql
+
+      # Add your build and test steps here
 
 workflows:
   version: 2
