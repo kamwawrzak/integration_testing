@@ -25,6 +25,9 @@ jobs:
       - run:
           name: Start MySQL container
           command: docker-compose up -d mysql
+      - run:
+          name: Run tests
+          command: go test ./... -v --race
 
       # Add your build and test steps here
 
