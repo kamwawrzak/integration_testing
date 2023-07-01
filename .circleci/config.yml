@@ -3,6 +3,8 @@ executors:
   docker-executor:
     docker:
       - image: circleci/golang:1.17
+    environment:
+      DOCKER_COMPOSE_VERSION: 1.29.2
 jobs:
   tests:
     executor: docker-executor
