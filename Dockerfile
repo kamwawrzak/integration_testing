@@ -2,7 +2,7 @@
 FROM golang:latest
 
 # Set the working directory inside the container
-WORKDIR /app
+#WORKDIR /app
 
 # Copy the source code into the container
 COPY . .
