@@ -1,19 +1,19 @@
 version: 2.1
 jobs:
-  build:
+  tests:
+    working_directory: /app
     docker:
-      - image: circleci/golang:1.17
-
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
 
       - run:
-          name: Build and test
+          name: Start database
           command: |
-            echo "Hello World"
+            make start-db
 
 workflows:
   version: 2
-  build:
+  integration-tests:
     jobs:
-      - build
+      - tests
