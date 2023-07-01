@@ -18,7 +18,7 @@ jobs:
             echo $USER
             chown -R $USER:$USER /home/circleci/app
             git init /home/circleci/app
-      - checkout
+      #- checkout
       - setup_remote_docker:
           docker_layer_caching: true
           version: 20.10.12
