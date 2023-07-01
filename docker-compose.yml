@@ -11,3 +11,8 @@ services:
       MYSQL_DATABASE: mydatabase
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
+  integration-test:
+    container_name: integration-test
+    image: integration-test:latest
+    ports:
+      12110:12110

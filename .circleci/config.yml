@@ -32,8 +32,13 @@ jobs:
           name: Start MySQL container
           command: docker-compose up -d mysql
       - run:
+          name: Build test
+          command: |
+            cd integration_test
+            docker build -t my-gotest . 
+      - run:
           name: Run tests
-          command: go test ./... -v --race
+          command: docker-compose up -d integration-test
 
       # Add your build and test steps here
 
