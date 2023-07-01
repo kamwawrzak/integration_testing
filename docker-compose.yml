@@ -15,4 +15,4 @@ services:
     container_name: integration-test
     image: integration-test:latest
     ports:
-      12110:12110
+      - 12110:12110
