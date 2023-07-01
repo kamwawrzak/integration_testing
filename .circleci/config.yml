@@ -35,7 +35,7 @@ jobs:
           name: Run test
           command: |
             docker build -t my-gotest . 
-            docker run my-gotest
+            docker run --network app_default my-gotest
 
       # Add your build and test steps here
 
