@@ -7,7 +7,7 @@ executors:
       DOCKER_COMPOSE_VERSION: 1.29.2
 jobs:
   tests:
-    #working_directory: /app
+    working_directory: /app
     #executor: go-executor
     docker:
       - image: circleci/golang:1.17
