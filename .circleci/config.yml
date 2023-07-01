@@ -16,6 +16,7 @@ jobs:
           name: whoam
           command: |
             whoami
+            mkdir app
       - checkout
       - setup_remote_docker:
           docker_layer_caching: true
