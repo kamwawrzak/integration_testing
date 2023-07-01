@@ -34,7 +34,6 @@ jobs:
       - run:
           name: Run test
           command: |
-            cd integration_test
             docker build -t my-gotest . 
             docker run my-gotest
 

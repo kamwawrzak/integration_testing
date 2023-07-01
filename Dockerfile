@@ -5,7 +5,7 @@ FROM golang:latest
 WORKDIR /app
 
 # Copy the source code into the container
-COPY ../grpc_integeation .
+COPY . .
 
 # Run the tests
 CMD ["go", "test", "-v", "./..."]
