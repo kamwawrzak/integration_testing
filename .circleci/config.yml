@@ -12,6 +12,10 @@ jobs:
     docker:
       - image: circleci/golang:1.17
     steps:
+      - run:
+          name: whoam
+          command: |
+            whoami
       - checkout
       - setup_remote_docker:
           docker_layer_caching: true
