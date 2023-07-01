@@ -31,7 +31,7 @@ func TestIntegrationTestSuite(t *testing.T) {
 func (suite *IntegrationTestSuite) SetupSuite(){
 	var err error
 	// Establish a database connection
-	suite.dbConn, err = dbr.Open("mysql", "root:mypassword@tcp(localhost:3306)/test_db", nil)
+	suite.dbConn, err = dbr.Open("mysql", "root:mypassword@tcp(my-mysql:3306)/test_db", nil)
 	//suite.dbConn, err = dbr.Open("mysql", "root:mypassword@tcp(my-mysql:3306)/test_db", nil)
 	if err != nil {
 		fmt.Println("Failed to connect to the database:", err)
