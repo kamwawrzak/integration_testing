@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --no-cache py-pip=23.1.2
+            apk add --no-cache apk py3-pip
             pip install docker-compose==19.03.0
       - run:
           name: Start MySQL container
