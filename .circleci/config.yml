@@ -7,7 +7,7 @@ executors:
       DOCKER_COMPOSE_VERSION: 1.29.2
 jobs:
   tests:
-    working_directory: /app
+    working_directory: /home/circleci/app
     #executor: go-executor
     docker:
       - image: circleci/golang:1.17
@@ -16,7 +16,7 @@ jobs:
           name: whoam
           command: |
             echo $USER
-            chown -R $USER:$USER /app
+            chown -R $USER:$USER /home/circleci/app
             mkdir app
       - checkout
       - setup_remote_docker:
