@@ -26,7 +26,7 @@ jobs:
           name: Start MySQL container
           command: |
             docker-compose up -d mysql
-            docker exec -it --network app_default my-mysql mysql -u root -pmypassword -e "CREATE DATABASE test_db"
+            docker exec -it my-mysql mysql -u root -pmypassword -e "CREATE DATABASE test_db"
       - run:
           name: Run test
           command: |
