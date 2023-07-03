@@ -5,7 +5,7 @@ services:
     container_name: my-mysql
     image: mysql:latest
     ports:
-      - 3306:3306
+      - 3307:3306
     environment:
       MYSQL_ROOT_PASSWORD: mypassword
       MYSQL_DATABASE: mydatabase
