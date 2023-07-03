@@ -30,8 +30,10 @@ jobs:
       - run:
           name: Run test
           command: |
-            docker build -t my-gotest . 
-            docker run --network app_default my-gotest
+            docker build -t my-gotest:latest .
+            echo "Builded"
+            docker run --rm --network app_default my-gotest:latest
+            echo "Runned"
 
       # Add your build and test steps here
 
