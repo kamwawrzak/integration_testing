@@ -10,13 +10,3 @@ WORKDIR /app/integration_test
 # Run the tests
 ENTRYPOINT ["go", "test", "-v", "./..."]
 
-FROM golang:latest AS build
-
-# Set the working directory inside the container
-WORKDIR /app
-RUN echo "in build"
-# Copy the source code into the container
-COPY . .
-
-# Run the tests
-ENTRYPOINT ["go", "build"]
