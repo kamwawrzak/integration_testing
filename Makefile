@@ -32,7 +32,7 @@ clean:
 # Run tests
 test:
 	mkdir test-results
-	go test -v ./... > test-results/results.txt
+	go test -v ./... 2>&1 > test-results/results.txt
 
 # Default target
 .DEFAULT_GOAL := run
