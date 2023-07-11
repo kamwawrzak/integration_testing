@@ -32,9 +32,6 @@ jobs:
           command: |
             docker build -t my-gotest:latest .
             docker run --network app_default --name integration-test my-gotest:latest
-      - run:
-          name: check
-          command: |
             docker exec integration-test ls
             docker cp integration-test:/app/test-results ./test-results
       - store_artifacts:
