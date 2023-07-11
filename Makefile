@@ -31,6 +31,7 @@ clean:
 
 # Run tests
 test:
+	mkdir test-results
 	go -v test ./... > test-results/results.txt
 
 # Default target
