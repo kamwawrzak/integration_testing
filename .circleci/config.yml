@@ -31,9 +31,9 @@ jobs:
           name: Run test
           command: |
             docker build -t my-gotest:latest .
-            echo "Builded"
-            docker run --rm --network app_default my-gotest:latest
-            echo "Runned"
+            docker run --rm --network app_default --name integration-test my-gotest:latest
+            docker exec integration-test ls
+            docker cp integration-test:/app/test-results ./test-results
       - store_artifacts:
           path: /test-results
 
