@@ -31,7 +31,7 @@ clean:
 
 # Run tests
 test:
-	go test ./...
+	go -v test ./... > test-results/results.txt
 
 # Default target
 .DEFAULT_GOAL := run
