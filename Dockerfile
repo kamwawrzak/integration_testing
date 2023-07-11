@@ -8,5 +8,5 @@ RUN echo "in test"
 COPY . .
 WORKDIR /app/integration_test
 # Run the tests
-ENTRYPOINT ["go", "test", "-v", "./..."]
+ENTRYPOINT ["make", "test"]
 
