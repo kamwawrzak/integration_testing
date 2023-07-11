@@ -35,7 +35,7 @@ jobs:
             docker run --rm --network app_default my-gotest:latest
             echo "Runned"
       - store_artifacts:
-        path: /test-results
+          path: /test-results
 
       # Add your build and test steps here
 
