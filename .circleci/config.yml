@@ -31,7 +31,7 @@ jobs:
           name: Run test
           command: |
             docker build -t my-gotest:latest .
-            docker run --rm --network app_default --name integration-test my-gotest:latest
+            docker run --network app_default --name integration-test my-gotest:latest
             docker exec integration-test ls
       - run:
           name: check
