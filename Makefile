@@ -33,6 +33,11 @@ clean:
 test:
 	mkdir test-results
 	go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/report.xml
+	go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/report.xml
+
+install-junitor:
+	go get github.com/jstemmer/go-junit-report
+	go install github.com/jstemmer/go-junit-report
 
 # Default target
 .DEFAULT_GOAL := run
