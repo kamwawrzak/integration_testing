@@ -35,6 +35,8 @@ jobs:
             docker cp integration-test:/app/test-results ./test-results
       - store_artifacts:
           path: test-results
+      - store_test_results:
+          path: test-results
 
       # Add your build and test steps here
 

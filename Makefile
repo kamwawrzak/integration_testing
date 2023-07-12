@@ -31,7 +31,7 @@ clean:
 
 # Run tests
 test:
-	go test -v ./... 2>&1 > test-results/results.txt
+	go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/report.xml
 
 # Default target
 .DEFAULT_GOAL := run
