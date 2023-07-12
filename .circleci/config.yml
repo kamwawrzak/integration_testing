@@ -37,7 +37,7 @@ jobs:
           name: Prepare test results
           command: |
             make install-junitor
-            docker cp integration-test:/app/test-results | go-junit-report > test-results/report.xml
+            docker cp integration-test:/app/test-results - | go-junit-report > test-results/report.xml
       - store_artifacts:
           path: test-results
       - store_test_results:
