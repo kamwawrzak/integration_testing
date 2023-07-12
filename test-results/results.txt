@@ -1,0 +1,11 @@
+?   	example.com/m	[no test files]
+?   	example.com/m/genproto	[no test files]
+?   	example.com/m/handler	[no test files]
+=== RUN   TestIntegrationTestSuite
+=== RUN   TestIntegrationTestSuite/TestHealthCheck
+Status con:  READY
+Test 1 end
+--- PASS: TestIntegrationTestSuite (13.14s)
+    --- PASS: TestIntegrationTestSuite/TestHealthCheck (1.01s)
+PASS
+ok  	example.com/m/integration_test	13.154s

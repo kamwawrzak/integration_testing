@@ -34,7 +34,7 @@ jobs:
             docker run --network app_default --name integration-test my-gotest:latest
             docker cp integration-test:/app/test-results ./test-results
       - store_artifacts:
-          path: /test-results
+          path: test-results
 
       # Add your build and test steps here
 
