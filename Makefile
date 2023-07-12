@@ -31,6 +31,7 @@ clean:
 
 # Run tests
 test:
+	mkdir test-results
 	go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/report.xml
 
 # Default target
