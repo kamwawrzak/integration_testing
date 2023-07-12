@@ -28,9 +28,11 @@ jobs:
             docker-compose up -d mysql
             sleep 5
       - run:
+          name: Build test container
+          command: docker build -t my-gotest:latest .
+      - run:
           name: Run test
           command: |
-            docker build -t my-gotest:latest .
             docker run -t --network app_default --name integration-test my-gotest:latest
           #docker cp integration-test:/app/test-results ./test-results
       - run:

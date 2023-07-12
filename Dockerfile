@@ -7,8 +7,6 @@ WORKDIR /app
 # Copy the source code into the container
 COPY . .
 
-#RUN go get github.com/jstemmer/go-junit-report
-#RUN go install github.com/jstemmer/go-junit-report
 
 # Run the tests
 ENTRYPOINT ["make", "test"]
