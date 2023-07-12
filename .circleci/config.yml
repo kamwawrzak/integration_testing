@@ -32,7 +32,7 @@ jobs:
           command: |
             docker build -t my-gotest:latest .
             docker run -t --network app_default --name integration-test my-gotest:latest
-            docker cp integration-test:/app/test-results ./test-results
+          #docker cp integration-test:/app/test-results ./test-results
       - store_artifacts:
           path: test-results
       - store_test_results:
