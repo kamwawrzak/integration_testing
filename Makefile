@@ -30,10 +30,11 @@ clean:
 	rm -f my-app
 
 # Run tests
+# go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/report.xml
 test:
 	mkdir test-results
-	go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/report.xml
-	go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/report.xml
+	
+	go test -v ./... 2>&1 | tee /dev/tty | go-junit-report > test-results/test.out
 
 install-junitor:
 	go get github.com/jstemmer/go-junit-report
