@@ -9,5 +9,5 @@ COPY . .
 
 
 # Run the tests
-ENTRYPOINT ["set -o pipefail && make test"]
+ENTRYPOINT ["/bin/bash -c set -o pipefail && make test"]
 
