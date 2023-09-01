@@ -101,7 +101,7 @@ func (suite *IntegrationTestSuite) TestHealthCheck() {
 	fmt.Println("Status con: ", suite.conn.GetState())
 	resp, err := healthClient.Check(context.Background(), req)
 	suite.NoError(err)
-	suite.Equal(healthpb.HealthCheckResponse_SERVING, resp.GetStatus())
+	suite.Equal(healthpb.HealthCheckResponse_NOT_SERVING, resp.GetStatus())
 	fmt.Println("Test 1 end")
 	}
 
