@@ -11,5 +11,5 @@ COPY . .
 
 # Run the tests
 ENTRYPOINT ["/bin/bash", "-c"]
-CMD "set -o pipefail && make test"
+CMD "make test"
 

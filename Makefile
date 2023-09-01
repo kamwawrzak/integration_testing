@@ -32,6 +32,7 @@ clean:
 # Run tests
 test:
 	mkdir test-results
+	set -o pipefail
 	go test -v ./... 2>&1 | tee /dev/tty > test-results/test.out
 
 install-junitor:
