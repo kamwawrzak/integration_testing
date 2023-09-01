@@ -10,6 +10,6 @@ COPY . .
 
 
 # Run the tests
-ENTRYPOINT ["/bin/bash", "set -o pipefail", "-c"]
-CMD ["make test"]
+ENTRYPOINT ["/bin/bash", "-c"]
+CMD "set -o pipefail && make test"
 
