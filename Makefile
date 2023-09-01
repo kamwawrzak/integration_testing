@@ -1,6 +1,7 @@
 DB_NAME = mydatabase
 DB_USER = myuser
 DB_PASSWORD = mypassword
+SHELL=/bin/bash -o pipefail
 
 # Create the MySQL database
 create-db:
@@ -32,7 +33,6 @@ clean:
 # Run tests
 test:
 	mkdir test-results
-	set -o pipefail
 	go test -v ./... 2>&1 | tee /dev/tty > test-results/test.out
 
 install-junitor:

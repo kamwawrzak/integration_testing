@@ -12,6 +12,6 @@ COPY . .
 
 
 # Run the tests
-ENTRYPOINT ["/bin/bash", "-c", "make test"]
+ENTRYPOINT ["make test"]
 
 
