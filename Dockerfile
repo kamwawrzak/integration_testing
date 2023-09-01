@@ -1,5 +1,5 @@
 # Use an official Go runtime as the base image
-FROM golang:latest AS integration-test
+FROM ubuntu:20.04 AS integration-test
 
 # Set the working directory inside the container
 WORKDIR /app
