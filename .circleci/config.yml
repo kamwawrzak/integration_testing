@@ -33,8 +33,7 @@ jobs:
       - run:
           name: Run test
           command: |
-            docker run -t --network app_default --name integration-test my-gotest:latest
-          #docker cp integration-test:/app/test-results ./test-results
+            docker run -t --network app_default my-gotest:latest --name integration-test 
       - run:
           name: Prepare test results
           command: |
