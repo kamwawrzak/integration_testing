@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y make
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl \
+    gcc \
     ca-certificates \
     && apt-get clean
 
