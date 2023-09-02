@@ -33,7 +33,7 @@ clean:
 # Run tests
 test:
 	mkdir test-results
-	go test -v ./... 2>&1 | tee /dev/console > test-results/test.out
+	go test -v ./... 2>&1 | tee /dev/tty0 > test-results/test.out
 
 install-junitor:
 	go get github.com/jstemmer/go-junit-report
