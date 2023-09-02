@@ -15,6 +15,6 @@ COPY . .
 # ENTRYPOINT ["make test"]
 RUN mkdir test-results
 	
-CMD ["/bin/bash", "-c", "set -o pipefail && go test -v ./... 2>&1 | tee /dev/tty > test-results/test.out"]
+ENTRYPOINT ["/bin/bash", "-c", "set -o pipefail && go test -v ./... 2>&1 | tee /dev/tty > test-results/test.out"]
 
 
