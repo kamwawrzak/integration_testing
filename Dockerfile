@@ -6,7 +6,6 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y make
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Copy the source code into the container
 COPY . .
@@ -14,6 +13,6 @@ COPY . .
 
 # Run the tests
 # ENTRYPOINT ["make test"]
-RUN make test
+RUN ["/bin/bash", "-c", "set -o pipefail && make test"]
 
 
