@@ -29,7 +29,10 @@ COPY . .
 # Run the tests
 # ENTRYPOINT ["make test"]
 RUN mkdir test-results
-	
-ENTRYPOINT ["/bin/bash", "-c", "set -o pipefail && go test -v ./... 2>&1 | tee /dev/tty > test-results/test.out"]
+#
+#to jest git	
+# ENTRYPOINT ["/bin/bash", "-c", "set -o pipefail && go test -v ./... 2>&1 | tee /dev/tty > test-results/test.out"]
+
+ENTRYPOINT [ "make test" ]
 
 
