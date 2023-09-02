@@ -33,7 +33,8 @@ jobs:
       - run:
           name: Run test
           command: |
-            docker run -t --network app_default my-gotest:latest --name integration-test 
+            docker run -t --network app_default my-gotest:latest --name integration-test
+            docker logs integration-test
       - run:
           name: Prepare test results
           command: |
