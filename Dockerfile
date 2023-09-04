@@ -33,6 +33,6 @@ RUN mkdir test-results
 #to jest git	
 # ENTRYPOINT ["/bin/bash", "-c", "set -o pipefail && go test -v ./... 2>&1 | tee /dev/tty > test-results/test.out"]
 
-ENTRYPOINT [ "make test" ]
+ENTRYPOINT ["/bin/bash", "-c", "set -o pipefail && make test" ]
 
 
