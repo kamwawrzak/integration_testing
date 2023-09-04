@@ -35,7 +35,7 @@ clean:
 testt:
 	mkdir test-results
 	/bin/bash -o pipefail -c go test -v ./... 2>&1 | tee > test-results/test.out
-testt:
+test:
 	mkdir test-results
 	go test -v ./... 2>&1 | tee > test-results/test.out
 
